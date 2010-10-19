@@ -1,14 +1,15 @@
-" ir_black color scheme
+" ir_black2 color scheme
 " More at: http://blog.infinitered.com/entries/show/8
 
 
 " ********************************************************************************
-" Standard colors used in all ir_black themes:
+" Standard colors used in all ir_black2 themes:
 " Note, x:x:x are RGB values
 "
 "  normal: #f6f3e8
 " 
 "  string: #A8FF60  168:255:96                   
+"
 "    string inner (punc, code, etc): #00A0A0  0:160:160
 "  number: #FF73FD  255:115:253                 
 "  comments: #7C7C7C  124:124:124
@@ -60,7 +61,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "ir_black"
+let colors_name = "ir_black2"
 
 
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -70,11 +71,12 @@ hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NO
 hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
-hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+hi LineNr           guifg=darkgray    guibg=black       gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
-hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
+hi VertSplit        guifg=white       guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
+hi StatusLine       guifg=#CCCCCC     guibg=blue        gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
+hi StatusLineNC     guifg=white       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -210,3 +212,5 @@ hi  link csXmlTag             Keyword
 
 
 " Special for PHP
+
+
