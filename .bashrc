@@ -1,1 +1,0 @@
-/home/bruno/.bashrc
