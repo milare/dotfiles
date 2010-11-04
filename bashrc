@@ -219,6 +219,10 @@ extract () {
   fi
 }
 
+
+findf() {
+ find . $2 | xargs grep -i $1
+}
 #Automatically do an ls after each cd
 cd() {
   if [ -n "$1" ]; then

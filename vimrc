@@ -506,6 +506,8 @@
     set backspace=indent,eol,start      " make backspace a more flexible
 
     set nrformats=alpha,octal,hex   " C-A/C-X: increment/decrement
+    
+    au  FileType ruby setl sw=2 sts=2 et
 
     " wrap {
     set nowrap sidescroll=1         " [no] wrap long lines
