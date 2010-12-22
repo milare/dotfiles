@@ -180,6 +180,16 @@ alias ksf='killall swiftfox-bin'
 alias del='rm --target-directory=$HOME/.Trash/'
 alias font='fc-cache -v -f'
 
+# cit servers
+alias pina='ssh exame@pina'
+alias abeguar='ssh exame@abeguar'
+
+
+#abril servers
+alias dev-abril='ssh exame@dev.exame.abril.com.br -p 5022'
+alias qa-abril='ssh exame@qa.exame.abril.com.br -p 5022'
+
+
 # Rails
 mrake () { RAILS_ENV="$1" rake "$2"; }
 alias tdrop='RAILS_ENV=test rake db:drop'
@@ -219,9 +229,10 @@ extract () {
   fi
 }
 
+export GREP_OPTIONS="--color=auto"
 
 findf() {
- find . $2 | xargs grep -i $1
+ find . | xargs grep $1 -islno
 }
 #Automatically do an ls after each cd
 cd() {

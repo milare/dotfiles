@@ -118,6 +118,9 @@
     imap <C-f> <C-x><C-f>
     imap <C-l> <C-x><C-l>
 
+
+    " Tab moving
+
     " space / shift-space scroll in normal mode
 "   noremap <S-space> <C-b>
 "   noremap <space>   <C-f>
@@ -222,6 +225,7 @@
     " list invisibles on/off
     nmap <leader>l :set invlist  <CR>
      " }
+     
 
     " Misc {
     " K = inverted J: join line up
@@ -245,6 +249,9 @@
     nnoremap <tab> %
     vnoremap <tab> %
 
+    nmap <C-Right> :tabnext<CR>
+    nmap <C-t> :tabnew<CR>
+    nmap <C-Left> :tabprevious<CR>
 
     " Creating underline/overline headings for markup languages
     " Inspired by http://sphinx.pocoo.org/rest.html#sections
@@ -281,6 +288,7 @@
 
 
 " }
+
 
 " Commands {
 
