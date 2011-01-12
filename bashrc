@@ -77,9 +77,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-export http_proxy=http://proxycps2.cit:3128
-export https_proxy=http://proxycps2.cit:3128
-export ftp_proxy=http://proxycps2.cit:3128
+if [ $home = "cps" ]; then
+    echo "@home"
+else
+    echo "@cit"
+    export http_proxy=http://proxycps2.cit:3128
+    export https_proxy=http://proxycps2.cit:3128
+    export ftp_proxy=http://proxycps2.cit:3128
+fi
 
 # Colours
 export BLUE="\[\033[1;34m\]"
@@ -195,7 +200,7 @@ custom_prompt () {
 
     PS1="\n${RUBY_PROMPT}${YELLOW}\w\a${NO_COLOR} (${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}${NO_COLOR})\n${BLUE}\$${NO_COLOR} "
   else
-    PS1="\n${RUBY_PROMPT}${YELLOW}\w\a${NO_COLOR}\n\$ "
+    PS1="\n${RUBY_PROMPT}${YELLOW}\w\a${NO_COLOR}\n${BLUE}\$${NO_COLOR} "
   fi
 }
 
@@ -315,9 +320,6 @@ extract () {
 }
 
 export GREP_OPTIONS="--color=auto"
-export https_proxy="http://proxycps2.cit:3128/"
-export http_proxy="http://proxycps2.cit:3128/"
-export ftp_proxy="http://proxycps2.cit:3128/"
 
 findf() {
  find . | xargs grep $1 -islno
@@ -335,7 +337,6 @@ cd() {
 # WELCOME SCREEN #
 ##################
 
-clear
 fortune | cowsay -f tux
 echo -ne "${NC}"
 
