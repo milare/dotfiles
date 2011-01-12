@@ -1,0 +1,88 @@
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# You can set your favourite wallpaper here if you don't want
+# to do it from your style.
+#
+fbsetbg -f /home/bruno/wallpapers/cars/Shelby_AC-C_159_1440x900.jpg
+
+#
+Esetroot -center -scale  /home/bruno/wallpapers/cars/Shelby_AC-C_159_1440x900.jpg
+
+
+
+# This sets a black background
+
+#/usr/bin/fbsetroot -solid black
+
+# This shows the fluxbox-splash-screen
+#fbsetbg -C  ~/wallpapers/debianwall2.jpg 
+ 
+# Other examples. Check man xset for details.
+#
+# Turn off beeps:
+ xset -b
+#
+# Increase the keyboard repeat-rate:
+# xset r rate 195 35
+#
+# Your own fonts-dir:
+# xset +fp /home/bruno/.font
+#
+# Your favourite mouse cursor:
+# xsetroot -cursor_name right_ptr
+#
+# Change your keymap:
+# xmodmap ~/.Xmodmap
+
+PATH=/usr/local/java/jdk1.5.0_11/bin:$PATH:$HOME/bin:./
+export PATH
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+gnome-terminal --geometry 150x40+110+70 --hide-menubar &
+# Areas
+# casual1
+#Eterm -g 120x25+520+5 -x -v  0 -D 0 --trans -f white -c white --shade 1 --buttonbar=off --scrollbar no --cmod 100 &
+#
+## casual2
+#Eterm -g 120x25+520+5 -x -v  0 -D 1 --trans -f white -c white --shade 1 --buttonbar=off --scrollbar no --cmod 100 &
+#
+## casual3
+#Eterm -g 120x25+520+5 -x -v  0 -D 2 --trans -f white -c white --shade 1 --buttonbar=off --scrollbar no --cmod 100 &
+#
+## casual4
+#Eterm -g 120x25+520+5 -x -v  0 -D 3 --trans -f white -c white --shade 1 --buttonbar=off --scrollbar no --cmod 100 &
+#
+##terminais1
+#Eterm -g 120x25+190+10 -x -v  0 -D 4 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+645+10 -x -v  0 -D 4 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+190+350 -x -v  0 -D 4 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+645+350 -x -v  0 -D 4 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#
+##terminais2
+#Eterm -g 120x25+190+10 -x -v  0 -D 5 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+645+10 -x -v  0 -D 5 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+190+350 -x -v  0 -D 5 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+#Eterm -g 120x25+645+350 -x -v  0 -D 5 --trans -f white -c white --shade 0 --buttonbar=off --scrollbar no --cmod 100 &
+
+# todos workspaces
+conky -x 112 -y 0  &
+gnome-volume-control-applet &
+adesklets &
+gnome-do &
+PATH=/usr/local/java/jdk1.5.0_11/bin:$PATH:$HOME/bin:./
+export PATH
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+exec /usr/bin/fluxbox
+# or if you want to keep a log:
+# exec /usr/bin/fluxbox -log ~/.fluxbox/log
